@@ -35,6 +35,8 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.btn-add {
   margin: auto;
   margin-top: 15px;
 }

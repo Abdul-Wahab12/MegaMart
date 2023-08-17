@@ -35,7 +35,7 @@ const Products = () => {
                         starRatedColor="#fdb44b"
                         className="stars"
                     />
-                    <button className='btn' onClick={() =>handleAdd(product)}>Add to cart</button>
+                    <button className='btn btn-add' onClick={() =>handleAdd(product)}>Add to cart</button>
                 </div>
             ))
         }
