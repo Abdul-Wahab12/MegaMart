@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react'
+import {useDispatch} from 'react-redux';
 import StarRatings from 'react-star-ratings';
+import { add } from '../store/cartSlice';
 
 const Products = () => {
+    const dispatch = useDispatch();
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
@@ -12,7 +15,12 @@ const Products = () => {
             setProducts(data);
         } 
         fetchProducts();
-    }, [])
+    }, []);
+
+    const handleAdd = (product) => {
+        // store product in redux store
+        dispatch(add(product));
+    }
   return (
     <div className='productsWrapper'>
         {
@@ -27,7 +35,7 @@ const Products = () => {
                         starRatedColor="#fdb44b"
                         className="stars"
                     />
-                    <button className='btn'>Add to cart</button>
+                    <button className='btn' onClick={() =>handleAdd(product)}>Add to cart</button>
                 </div>
             ))
         }

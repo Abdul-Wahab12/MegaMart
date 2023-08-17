@@ -6,7 +6,7 @@ const Home = () => {
     <div>
       <h2 className='heading'>Welcome to Mega Mart Store</h2>
       <section>
-        <h3>Products</h3>
+        <h3>Results</h3> 
         <Products />
       </section>
     </div>
